@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9c63899-206a-4b86-bfe9-cffe0b4f3c2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Bookswagon_Automation/src/main/java/Pages/BookCartFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bookswagon_Automation/src/main/java/Pages/ShippingAdd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bookswagon_Automation/src/test/java/TestCases/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Bookswagon_Automation/src/test/java/TestCases/TestClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
