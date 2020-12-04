@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 public class ReviewOrder {
 
     WebDriver driver;
-    public boolean flag;
 
     public ReviewOrder(WebDriver driver) {
         this.driver = driver;
@@ -18,14 +17,9 @@ public class ReviewOrder {
     @FindBy(id = "ctl00_lnkbtnLogout")
     WebElement logOutButton;
 
-    @FindBy(xpath = "//h1[contains(text(),'My Account')]")
-    WebElement verification;
-
     public void logOut() throws InterruptedException {
         Thread.sleep(2000);
         logOutButton.click();
-        if(verification.toString().contains("My Account")){
-            flag = true;
-        }
+        Thread.sleep(5000);
     }
 }

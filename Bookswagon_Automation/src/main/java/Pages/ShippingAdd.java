@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 public class ShippingAdd {
 
     WebDriver driver;
-    public boolean flag = false;
 
     public ShippingAdd(WebDriver driver) {
         this.driver = driver;
@@ -45,9 +44,6 @@ public class ShippingAdd {
     @FindBy(id = "ctl00_cpBody_imgSaveNew")
     WebElement saveAndContinue;
 
-    @FindBy(xpath = "//h3[contains(text(),'Review your Order ')]")
-    WebElement verification;
-
     public void Address() throws InterruptedException {
         Thread.sleep(2000);
         continueButton.click();
@@ -65,10 +61,6 @@ public class ShippingAdd {
         mobile.sendKeys("7768076656");
         Thread.sleep(3000);
         saveAndContinue.click();
-        Thread.sleep(3000);
-        if(verification.toString().contains("Review your Order ") ){
-            flag = true;
-        }
-
+        Thread.sleep(5000);
     }
 }
