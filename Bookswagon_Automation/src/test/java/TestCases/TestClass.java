@@ -1,5 +1,6 @@
 package TestCases;
 
+import Pages.BookCartFrame;
 import Pages.HomePage;
 import Pages.LoginPage;
 import org.testng.annotations.BeforeMethod;
@@ -18,6 +19,12 @@ public class TestClass extends BaseClass {
     {
         HomePage home = new HomePage(driver);
         home.search_Book();
+    }
+
+    @Test(priority = 3)
+    public void BookCartFrameTest() throws InterruptedException {
+        BookCartFrame buy = new BookCartFrame(driver);
+        buy.buyBook();
     }
 
 
