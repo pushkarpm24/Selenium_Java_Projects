@@ -1,9 +1,6 @@
 package TestCases;
 
-import Pages.BookCartFrame;
-import Pages.HomePage;
-import Pages.LoginPage;
-import Pages.ShippingAdd;
+import Pages.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -32,6 +29,12 @@ public class TestClass extends BaseClass {
     public void ShippingAddTest() throws InterruptedException {
         ShippingAdd add = new ShippingAdd(driver);
         add.Address();
+    }
+
+    @Test(priority = 5)
+    public void ReviewOrderTest() throws InterruptedException {
+        ReviewOrder order = new ReviewOrder(driver);
+        order.logOut();
     }
 
 
