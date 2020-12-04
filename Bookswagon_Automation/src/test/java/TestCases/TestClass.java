@@ -6,15 +6,18 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import utility.ConfigReader;
 
 public class TestClass extends BaseClass {
+    ConfigReader config = new ConfigReader();
+
     @Test(priority = 1)
     public void LoginPageTest()
     {
         LoginPage login = new LoginPage(driver);
         login.AccountLogin();
         String my_title = driver.getTitle();
-        String expected_title = "Online BookStore India, Buy Books Online, Buy Book Online India - Bookswagon.com";
+        String expected_title = config.getTitle();
         Assert.assertEquals(my_title,expected_title);
     }
 
@@ -23,7 +26,7 @@ public class TestClass extends BaseClass {
     {
         HomePage home = new HomePage(driver);
         home.search_Book();
-        Assert.assertTrue(driver.findElement(By.xpath("//body/form[@id='aspnetForm']/div[@id='site-wrapper']/div[2]/div[3]/div[2]/div[1]/div[2]/a[1]/img[1]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath(config.getBookImgId())).isDisplayed());
     }
 
     @Test(priority = 3)
